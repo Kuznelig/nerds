@@ -18,8 +18,10 @@ body {
     overflow: hidden;
   }
  .main-header {
+    
     background-color: #EEEEEE;
  } 
+
 .site-nav-item a {
     font-weight: 500;
     line-height: 30px;
@@ -151,19 +153,48 @@ input[type=email]::placeholder {
     color: #FFFFFF;
     text-transform: uppercase;
 }
-.site-navigation {
+.nav-wrapper {
     width: 1160px;
-    border: 1px solid #000000;
+    /* border: 1px solid #000000; */
     margin: 0 auto;
+    padding-top: 50px;
+    padding-left: 140px;
+    padding-right: 140px;
+}
+.site-navigation {
     display: flex;
 }
 .site-nav-list {
     margin: 0;
     padding: 0;
     list-style: none;
+    max-width: 600px;
     display: flex;
-}
+    flex-wrap: wrap;
+    gap: 45px;
+    row-gap: 15px;
+   
+    padding-top: 26px;
 
+}
+.logo-header {
+    width: 160px;
+    margin-right: 202px;
+}
+.cart {
+    width: 112px;
+    margin-left: auto;
+    padding-top: 26px;
+    display: flex;
+    justify-content: space-between;
+}
+.site-navigation p {
+    margin: 0;
+}
+.cart-img {
+    display: block;
+    padding-top: 7px;
+}
 
 
 
