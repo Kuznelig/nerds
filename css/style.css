@@ -1,0 +1,159 @@
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #283136;
+}
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+ .main-header {
+    background-color: #EEEEEE;
+ } 
+.site-nav-item a {
+    font-weight: 500;
+    line-height: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000000;
+}
+.cart a {
+    font-weight: 500;
+    line-height: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000000;
+}
+.slider1 {
+    background-color: #EEEEEE;
+    background-image: url(../img/nerds-index-slide1.png);
+    background-repeat: no-repeat;
+}
+.slider2 {
+    background-color: #EEEEEE;
+    background-image: url(../img/nerds-index-slide2.png);
+    background-repeat: no-repeat;
+}
+.slider3 {
+    background-color: #EEEEEE;
+    background-image: url(../img/nerds-index-slide3.png);
+    background-repeat: no-repeat;
+}
+.advantages .title {
+    font-size: 55px;
+    line-height: 55px;
+    font-weight: 500;
+    color: #000000;
+}
+.button {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+    background-color: #FB565A;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.services h3 {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000000;
+}
+.about .slogan-about {
+    font-size: 45px;
+    line-height: 45px;
+    font-weight: 500;
+    color: #000000;
+}
+.about h3 {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.about dt {
+    font-size: 45px;
+    line-height: 64px;
+    font-weight: 700;
+    color: #000000;
+}
+.about dl {
+    line-height: 18px;
+}
+.contacts h3 {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #000000;
+    text-transform: uppercase;
+}
+.contacts address {
+    line-height: 18px;
+    color: #666666;
+    font-style: normal;
+}
+.contacts .phone {
+    font-size: 16px;
+    line-height: 18px;
+    text-decoration: none;
+    color: #666666;
+}
+.social-list-item {
+    background-color: #E1E1E1;
+}
+.slogan-social {
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 700;
+    color: #000000;
+}
+.discount {
+    line-height: 22px;
+    color: #444444;
+}
+.feedback h2 {
+    font-size: 45px;
+    line-height: 53px;
+    color: #000000;
+}
+.feedback label {
+    line-height: 18px;
+    font-weight: 700;
+    color: #000000;
+}
+input[type=text]::placeholder {
+    color: #D7DCDE;
+    line-height: 18px;
+}
+input[type=email]::placeholder {
+    color: #D7DCDE;
+    line-height: 18px;
+}
+.feedback textarea {
+    color: #D7DCDE;
+    line-height: 18px;
+}
+.feedback .send {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+    background-color: #FB565A;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+/* CATALOG */
+.filters legend {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 700;
+}
