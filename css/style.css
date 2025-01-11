@@ -115,7 +115,7 @@ body {
     margin-bottom: 16px;
 }
 .services {
-    width: 1157px;
+    width: 1160px;
     margin: 0 auto;
     padding-left: 140px;
     padding-right: 140px;
@@ -146,13 +146,7 @@ body {
     width: 260px;
 }
 .button-order {
-    font-size: 16px;
-    line-height: 18px;
-    font-weight: 500;
-    background-color: #FB565A;
-    color: #FFFFFF;
-    text-decoration: none;
-    text-transform: uppercase;
+    
     padding: 17px 40px 15px 39px;
     margin-bottom: 80px;
     width: 160px;
@@ -168,7 +162,7 @@ body {
 }
 
 .about {
-    width: 1157px;
+    width: 1160px;
     margin: 0 auto;
     margin-bottom: 75px;
     padding-left: 140px;
@@ -259,20 +253,115 @@ table .table-description {
     position: relative;
 }
 
-
-
-
+.clients {
+    width: 1160px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    padding-left: 140px;
+    padding-right: 140px;
+}
+.clients-wrapper {
+    display: flex;
+    align-items: center;
+    padding-top: 48px;
+    padding-bottom: 46px;
+    border-top: 1px solid #EEEEEE;
+    border-bottom: 1px solid #EEEEEE;
+}
+.clients a {
+    display: block;
+}
+a.client-htmlacademy {
+    width: 199px;
+    height: 57px;
+    margin-left: 32px;
+    margin-right: 95px;
+    position: relative;
+}
+a.client-htmlacademy::after {
+    position: absolute;
+    content: url(../img/border-vertical.svg);
+    right: -48px;
+    top: 5px;
+}
+a.client-borodinskii {
+    width: 209px;
+    height: 90px;
+    margin-right: 104px;
+    position: relative;
+}
+a.client-borodinskii::after {
+    position: absolute;
+    content: url(../img/border-vertical.svg);
+    right: -44px;
+    top: 25px;
+}
+a.client-pink {
+    width: 185px;
+    height: 52px;
+    margin-right: 120px;
+    position: relative;
+}
+a.client-pink::after {
+    position: absolute;
+    content: url(../img/border-vertical.svg);
+    right: -55px;
+    top: 5px;
+}
+a.client-mishka {
+    width: 173px;
+    height: 84px;
+}
+.contacts {
+    width: 1440px;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 68px;
+}
+div.contact-content {
+    box-sizing: border-box;
+    width: 320px;
+    height: 308px;
+    background-color: #fff;
+    padding-top: 49px;
+    padding-bottom: 47px;
+    padding-left: 50px;
+    padding-right: 50px;
+    position: absolute;
+    left: 140px;
+    top: 54px;
+}
+img.mark {
+    position: absolute;
+    top: 70px;
+    right: 362px;
+}
 .contacts h3 {
     font-size: 18px;
     line-height: 30px;
     font-weight: 700;
     color: #000000;
     text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 23px;
+
 }
 .contacts address {
     line-height: 18px;
     color: #666666;
     font-style: normal;
+    margin-bottom: 20px;
+}
+.contacts .phone {
+    display: block;
+    margin-bottom: 37px;
+}
+.contact-content .button {
+    display: inline-block;
+    margin: 0;
+    padding: 17px 44px 15px 44px;
+    width: 219px;
+    box-sizing: border-box;
 }
 .contacts .phone {
     font-size: 16px;
@@ -280,18 +369,50 @@ table .table-description {
     text-decoration: none;
     color: #666666;
 }
+div.social {
+    width: 1160px;
+    margin: 0 auto;
+    padding-left: 140px;
+    padding-right: 140px;
+    margin-bottom: 68px;
+}
+.social-wrapper {
+    width: 1060px;
+    display: flex;
+    justify-content: space-between;
+}
+.social-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 261px;
+    display: flex;
+    justify-content: space-between;
+}
 .social-list-item {
     background-color: #E1E1E1;
+    width: 81px;
+    height: 81px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.slogan-social {
+.social-content {
+    width: 660px;
+}
+p.slogan-social {
     font-size: 36px;
     line-height: 36px;
     font-weight: 700;
     color: #000000;
+    margin: 0;
+    margin-bottom: 10px;
 }
-.discount {
+p.discount {
     line-height: 22px;
     color: #444444;
+    margin: 0;
 }
 .feedback h2 {
     font-size: 45px;
