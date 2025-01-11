@@ -18,10 +18,8 @@ body {
     overflow: hidden;
   }
  .main-header {
-    
     background-color: #EEEEEE;
  } 
-
 .site-nav-item a {
     font-weight: 500;
     line-height: 30px;
@@ -36,26 +34,62 @@ body {
     text-transform: uppercase;
     color: #000000;
 }
-.slider1 {
+.slider {
     background-color: #EEEEEE;
+    margin-bottom: 80px;
+}
+
+.slider-wrapper {
+    width: 1160px;
+    margin: 0 auto;
+    padding-left: 140px;
+    padding-right: 140px;
+}
+.slider-1 {
     background-image: url(../img/nerds-index-slide1.png);
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; 
+    background-position: right;
 }
-.slider2 {
-    background-color: #EEEEEE;
+.slider-2 {
     background-image: url(../img/nerds-index-slide2.png);
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; 
+    background-position: right;
 }
-.slider3 {
-    background-color: #EEEEEE;
+.slider-3 {
     background-image: url(../img/nerds-index-slide3.png);
     background-repeat: no-repeat;
+    background-position: right;
+
+}
+ .advantages {
+    display: flex;
+} 
+.slider-1 .slider-content {
+    width: 397px;
+}
+.slider-2 .slider-content {
+    width: 538px;
+}
+.slider-3 .slider-content {
+    width: 415px;
 }
 .advantages .title {
     font-size: 55px;
     line-height: 55px;
     font-weight: 500;
     color: #000000;
+    margin: 0;
+    margin-top: 79px;
+    margin-bottom: 26px;
+}
+.slider-content p {
+    margin: 0;
+}
+.slider-1 .title {
+    text-align: center;
+}
+.slider-2 .title {
+    text-align: center;
 }
 .button {
     font-size: 16px;
@@ -65,6 +99,11 @@ body {
     color: #FFFFFF;
     text-decoration: none;
     text-transform: uppercase;
+    padding: 17px 54px 15px 54px;
+    margin-top: 39px;
+    margin-bottom: 80px;
+    display: inline-block;
+    border-radius: 3px;
 }
 .services h3 {
     font-size: 24px;
@@ -72,26 +111,157 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     color: #000000;
+    margin: 0;
+    margin-bottom: 16px;
 }
-.about .slogan-about {
+.services {
+    width: 1157px;
+    margin: 0 auto;
+    padding-left: 140px;
+    padding-right: 140px;
+
+}
+.services-list {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    padding-right: 60px;
+    border-bottom: #EEEEEE 1px solid;
+
+}
+.services-list-item {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+.services-list-item img {
+    order: -1;
+    margin-bottom: 25px;
+}
+.services-list-item p {
+    margin: 0;
+    margin-bottom: 32px;
+    width: 260px;
+}
+.button-order {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+    background-color: #FB565A;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 17px 40px 15px 39px;
+    margin-bottom: 80px;
+    width: 160px;
+    display: inline-block;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+.services-list-item .green {
+    background-color: #00CA74;
+}
+.services-list-item .yellow {
+    background-color: #EFC849;
+}
+
+.about {
+    width: 1157px;
+    margin: 0 auto;
+    margin-bottom: 75px;
+    padding-left: 140px;
+    padding-right: 140px;
+}
+.about-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.about-text {
+    width: 660px;
+}
+.about-img {
+    width: 360px;
+    margin-top: 39px;
+}
+.slogan-about b {
     font-size: 45px;
     line-height: 45px;
     font-weight: 500;
     color: #000000;
+    margin-top: 73px;
+}
+.about-text .slogan-about {
+    margin-top: 73px;
+    margin-bottom: 32px;
+}
+
+.about-text .principle {
+    margin-bottom: 40px;
 }
 .about h3 {
+    font-size: 16px;
+    line-height: 24px;
     font-weight: 700;
     text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 23px;
 }
-.about dt {
+.about-img h3 {
+    text-align: center;  
+}
+.order-list {
+    padding: 0;
+    margin: 0;  
+    list-style: none;
+    padding-left: 32px;
+}
+.order-list  li {
+    position: relative;
+    margin-bottom: 23px;
+}
+.order-list  li::before {
+    content: url(../img/list-marker.svg);
+    position: absolute;
+    bottom: 5px;
+    left: -32px;
+}
+.about-img img {
+    margin-bottom: 37px;
+    display: block;
+}
+/* table {
+    border: #000000 1px solid;
+    border-collapse: collapse;
+} */
+table .percent {
     font-size: 45px;
     line-height: 64px;
     font-weight: 700;
     color: #000000;
+    /* border: #000000 1px solid; */
+    padding-bottom: 10px;
+    padding-right: 20px;
 }
-.about dd {
+table .table-description {
     line-height: 18px;
+    /* border: #000000 1px solid; */
+
 }
+.percent span {
+    font-size: 26px;
+    line-height: 40px;
+    position: absolute;
+    top: 6px;
+}
+.percent {
+    position: relative;
+}
+
+
+
+
 .contacts h3 {
     font-size: 18px;
     line-height: 30px;
@@ -195,7 +365,6 @@ input[type=email]::placeholder {
     display: block;
     padding-top: 7px;
 }
-
 
 
 
