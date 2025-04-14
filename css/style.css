@@ -24,12 +24,15 @@
     --gray-btn-hover: #DFDFDF;
     --gray-btn-active: #D5D5D5;
 }
+
 .page-body {
     font-family: "Roboto", Arial, sans-serif;
     font-size: 16px;
     line-height: 24px;
     color: var(--basic-dark);
     margin: 0;
+    /* Какое значение брать для min-width (1160px было указано в ТЗ) */
+    min-width: 1160px;
     /* Растянем body по высоте страницы.
 
 Зададим сетку для страницы: шапка занимает высоту по своему контенту, как и подвал, а контентная часть занимает всё возможное пространство. Так добиваемся того, чтобы подвал прилип к низу страницы. */
@@ -38,10 +41,12 @@
     display: grid;
     grid-template-rows: min-content 1fr min-content;
 }
-  /* Добавим всей странице высоту в 100%. Это нужно, чтобы при нехватке контента подвал прижимался к нижней части страницы. Далее наглядно посмотрим, зачем нужно это свойство. */
+
+/* Добавим всей странице высоту в 100%. Это нужно, чтобы при нехватке контента подвал прижимался к нижней части страницы. Далее наглядно посмотрим, зачем нужно это свойство. */
 .page {
     height: 100%;
 }
+
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -53,10 +58,12 @@
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
-  }
- .main-header {
+}
+
+.main-header {
     background-color: var(--basic-gray);
- } 
+}
+
 .site-nav-item a {
     font-weight: 500;
     line-height: 30px;
@@ -64,13 +71,17 @@
     text-transform: uppercase;
     color: var(--basic-black);
 }
+
 .site-nav-item a:hover {
     color: var(--red);
+    cursor: pointer;
 }
+
 .site-nav-item a:active {
     color: var(--basic-black);
     opacity: 0.3;
 }
+
 .cart a {
     font-weight: 500;
     line-height: 30px;
@@ -78,9 +89,11 @@
     text-transform: uppercase;
     color: var(--basic-black);
 }
+
 .cart a:hover {
     color: var(--red);
 }
+
 .cart a:active {
     color: var(--basic-black);
     opacity: 0.3;
@@ -101,6 +114,7 @@ ul.slider-list {
     padding: 0;
     list-style: none;
 }
+
 div.slider-container {
     width: 1160px;
     margin: 0 auto;
@@ -108,6 +122,7 @@ div.slider-container {
     padding-right: 140px;
     position: relative;
 }
+
 /* .slider {
     background-color: var(--basic-gray);
 } */
@@ -120,32 +135,38 @@ div.slider-container {
 } */
 .slider-1 {
     background-image: url(../img/nerds-index-slide1.png);
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
     background-position: right;
 }
+
 .slider-2 {
     background-image: url(../img/nerds-index-slide2.png);
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
     background-position: right;
 }
+
 .slider-3 {
     background-image: url(../img/nerds-index-slide3.png);
     background-repeat: no-repeat;
     background-position: right;
 }
 
- .advantages {
+.advantages {
     display: flex;
-} 
+}
+
 .slider-1 .slider-content {
     width: 397px;
 }
+
 .slider-2 .slider-content {
     width: 538px;
 }
+
 .slider-3 .slider-content {
     width: 415px;
 }
+
 .advantages .title {
     font-size: 55px;
     line-height: 55px;
@@ -155,15 +176,19 @@ div.slider-container {
     margin-top: 79px;
     margin-bottom: 26px;
 }
+
 .slider-content p {
     margin: 0;
 }
+
 .slider-1 .title {
     text-align: center;
 }
+
 .slider-2 .title {
     text-align: center;
 }
+
 a.button {
     font-size: 16px;
     line-height: 18px;
@@ -178,14 +203,18 @@ a.button {
     display: inline-block;
     border-radius: 3px;
 }
+
 a.button:hover {
     background-color: var(--dark-red);
+    cursor: pointer;
 }
+
 a.button:active {
     background-color: var(--extra-red);
     box-shadow: inset 0 3px 0 0 var(--shadow);
-    color: var(--white-opacity); 
+    color: var(--white-opacity);
 }
+
 .slider-controls button {
     padding: 0;
     width: 18px;
@@ -195,16 +224,18 @@ a.button:active {
     border: none;
     cursor: pointer;
     position: relative;
-   
-  }
-  .slider-controls {
-  position: absolute;
-   left: 676px;
-   bottom: 96px;
+
+}
+
+.slider-controls {
+    position: absolute;
+    left: 676px;
+    bottom: 96px;
     display: flex;
     width: 88px;
     justify-content: space-between;
-  }
+}
+
 .slider-controls .current::before {
     content: "";
     position: absolute;
@@ -213,12 +244,13 @@ a.button:active {
     background-color: white;
     border: 3px solid #C1C1C1;
     border-radius: 50%;
-    transform: translate(-50%, -50%);  
+    transform: translate(-50%, -50%);
 }
 
 div.slider {
     display: none;
-} 
+}
+
 div.slide-current {
     display: block;
 }
@@ -233,6 +265,7 @@ div.slide-current {
     margin: 0;
     margin-bottom: 16px;
 }
+
 .services {
     width: 1160px;
     margin: 0 auto;
@@ -240,6 +273,7 @@ div.slide-current {
     padding-right: 140px;
 
 }
+
 .services-list {
     display: flex;
     justify-content: space-between;
@@ -250,20 +284,24 @@ div.slide-current {
     border-bottom: var(--basic-gray) 1px solid;
 
 }
+
 .services-list-item {
     width: 300px;
     display: flex;
     flex-direction: column;
 }
+
 .services-list-item img {
     order: -1;
     margin-bottom: 25px;
 }
+
 .services-list-item p {
     margin: 0;
     margin-bottom: 32px;
     width: 260px;
 }
+
 a.button-order {
     padding: 17px 40px 15px 39px;
     margin-bottom: 80px;
@@ -272,7 +310,8 @@ a.button-order {
     border-radius: 3px;
     box-sizing: border-box;
 }
-button.button-order {   
+
+button.button-order {
     padding: 17px 40px 15px 39px;
     margin-bottom: 80px;
     width: 160px;
@@ -282,46 +321,56 @@ button.button-order {
     font-size: 16px;
     line-height: 18px;
     font-weight: 500;
-    font-family: "Roboto" , sans-serif;
+    font-family: "Roboto", sans-serif;
     background-color: var(--red);
     color: var(--basic-white);
     text-transform: uppercase;
     border: none;
     margin-top: 39px;
 }
+
 button.button-order:hover {
     background-color: var(--dark-red);
+    cursor: pointer;
 }
+
 button.button-order:active {
     background-color: var(--extra-red);
     box-shadow: inset 0 3px 0 0 var(--shadow);
     color: var(--white-opacity);
 
 }
- button.green {
+
+button.green {
     background-color: var(--green);
 }
+
 button.green:hover {
     background-color: var(--dark-green);
 }
+
 button.green:active {
     background-color: var(--extra-green);
     box-shadow: inset 0 3px 0 0 var(--shadow);
     color: var(--white-opacity);
 
 }
+
 button.yellow {
     background-color: var(--yellow);
 }
+
 button.yellow:hover {
     background-color: var(--dark-yellow);
 }
+
 button.yellow:active {
     background-color: var(--extra-yellow);
     box-shadow: inset 0 3px 0 0 var(--shadow);
     color: var(--white-opacity);
 
 }
+
 .about {
     width: 1160px;
     margin: 0 auto;
@@ -329,17 +378,21 @@ button.yellow:active {
     padding-left: 140px;
     padding-right: 140px;
 }
+
 .about-wrapper {
     display: flex;
     justify-content: space-between;
 }
+
 .about-text {
     width: 660px;
 }
+
 .about-img {
     width: 360px;
     margin-top: 39px;
 }
+
 .slogan-about b {
     font-size: 45px;
     line-height: 45px;
@@ -347,6 +400,7 @@ button.yellow:active {
     color: var(--basic-black);
     margin-top: 73px;
 }
+
 .about-text .slogan-about {
     margin-top: 73px;
     margin-bottom: 32px;
@@ -355,6 +409,7 @@ button.yellow:active {
 .about-text .principle {
     margin-bottom: 40px;
 }
+
 .about h3 {
     font-size: 16px;
     line-height: 24px;
@@ -363,29 +418,35 @@ button.yellow:active {
     margin: 0;
     margin-bottom: 23px;
 }
+
 .about-img h3 {
-    text-align: center;  
+    text-align: center;
 }
+
 .order-list {
     padding: 0;
-    margin: 0;  
+    margin: 0;
     list-style: none;
     padding-left: 32px;
 }
-.order-list  li {
+
+.order-list li {
     position: relative;
     margin-bottom: 23px;
 }
-.order-list  li::before {
+
+.order-list li::before {
     content: url(../img/list-marker.svg);
     position: absolute;
     bottom: 5px;
     left: -32px;
 }
+
 .about-img img {
     margin-bottom: 37px;
     display: block;
 }
+
 /* table {
     border: #000000 1px solid;
     border-collapse: collapse;
@@ -399,17 +460,20 @@ table .percent {
     padding-bottom: 10px;
     padding-right: 20px;
 }
+
 table .table-description {
     line-height: 18px;
     /* border: #000000 1px solid; */
 
 }
+
 .percent span {
     font-size: 26px;
     line-height: 40px;
     position: absolute;
     top: 6px;
 }
+
 .percent {
     position: relative;
 }
@@ -421,6 +485,7 @@ table .table-description {
     padding-left: 140px;
     padding-right: 140px;
 }
+
 .clients-wrapper {
     display: flex;
     align-items: center;
@@ -429,16 +494,20 @@ table .table-description {
     border-top: 1px solid var(--basic-gray);
     border-bottom: 1px solid var(--basic-gray);
 }
+
 .clients a {
     display: block;
     opacity: 0.2;
 }
+
 .clients a:hover {
     opacity: 1;
 }
+
 .clients a:active {
     opacity: 0.1;
 }
+
 a.client-htmlacademy {
     width: 199px;
     height: 57px;
@@ -446,46 +515,54 @@ a.client-htmlacademy {
     margin-right: 95px;
     position: relative;
 }
+
 a.client-htmlacademy::after {
     position: absolute;
     content: url(../img/border-vertical.svg);
     right: -48px;
     top: 5px;
 }
+
 a.client-borodinskii {
     width: 209px;
     height: 90px;
     margin-right: 104px;
     position: relative;
 }
+
 a.client-borodinskii::after {
     position: absolute;
     content: url(../img/border-vertical.svg);
     right: -44px;
     top: 25px;
 }
+
 a.client-pink {
     width: 185px;
     height: 52px;
     margin-right: 120px;
     position: relative;
 }
+
 a.client-pink::after {
     position: absolute;
     content: url(../img/border-vertical.svg);
     right: -55px;
     top: 5px;
 }
+
 a.client-mishka {
     width: 173px;
     height: 84px;
 }
+
 .contacts {
     width: 1440px;
     margin: 0 auto;
     position: relative;
     margin-bottom: 68px;
 }
+
 div.contact-content {
     box-sizing: border-box;
     width: 320px;
@@ -499,11 +576,13 @@ div.contact-content {
     left: 140px;
     top: 54px;
 }
+
 img.mark {
     position: absolute;
     top: 70px;
     right: 362px;
 }
+
 .contacts h3 {
     font-size: 18px;
     line-height: 30px;
@@ -514,16 +593,19 @@ img.mark {
     margin-bottom: 23px;
 
 }
+
 .contacts address {
     line-height: 18px;
     color: var(--dark-gray);
     font-style: normal;
     margin-bottom: 20px;
 }
+
 .contacts .phone {
     display: block;
     margin-bottom: 37px;
 }
+
 .contact-content .button {
     display: inline-block;
     margin: 0;
@@ -531,12 +613,14 @@ img.mark {
     width: 219px;
     box-sizing: border-box;
 }
+
 .contacts .phone {
     font-size: 16px;
     line-height: 18px;
     text-decoration: none;
     color: var(--dark-gray);
 }
+
 div.social {
     width: 1160px;
     margin: 0 auto;
@@ -544,11 +628,13 @@ div.social {
     padding-right: 140px;
     margin-bottom: 68px;
 }
+
 .social-wrapper {
     width: 1060px;
     display: flex;
     justify-content: space-between;
 }
+
 .social-list {
     margin: 0;
     padding: 0;
@@ -558,7 +644,7 @@ div.social {
     justify-content: space-between;
 }
 
-.social-list-item a{
+.social-list-item a {
     background-color: var(--light-gray);
     width: 81px;
     height: 81px;
@@ -567,21 +653,26 @@ div.social {
     justify-content: center;
     align-items: center;
 }
+
 .social-list-item a:hover {
     background-color: var(--dark-red);
 }
+
 .social-list-item a:active {
     background-color: var(--extra-red);
     box-shadow: inset 0 3px 0 0 var(--shadow);
+
 }
 
-
-img.img-social:active {
+.social-list-item a:active .img-social {
     opacity: 0.3;
 }
+
+
 .social-content {
     width: 660px;
 }
+
 p.slogan-social {
     font-size: 36px;
     line-height: 36px;
@@ -590,32 +681,45 @@ p.slogan-social {
     margin: 0;
     margin-bottom: 10px;
 }
+
 p.discount {
     line-height: 22px;
     color: var(--extra-gray);
     margin: 0;
 }
-footer {
+
+/* footer {
     position: relative;
-}
+} */
+
 section.feedback {
+    /* display: none; */
     background-color: #fff;
     /* outline: 5px solid rgba(226, 134, 29, 0.7);  */
-    outline-offset: -5px; 
+    /* outline-offset: -5px; */
     width: 960px;
     height: 590px;
-    padding: 63px 99px 84px 100px ;
+    padding: 63px 99px 84px 100px;
     box-sizing: border-box;
-    position: absolute;
-    left: 50%;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    margin-bottom: 180px;
+
+    /* left: 50%;
     transform: translate(-50%);
-    bottom: 185px;
+    bottom: 185px; */
     box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.4);
 }
 
 div.feedback-wrapper {
     position: relative;
 }
+
 .feedback h2 {
     font-size: 45px;
     line-height: 53px;
@@ -623,7 +727,8 @@ div.feedback-wrapper {
     margin: 0;
     margin-bottom: 37px;
 }
-.feedback h2::after {
+
+/* .feedback h2::after {
     position: absolute;
     content: "";
     width: 21px;
@@ -632,7 +737,29 @@ div.feedback-wrapper {
     right: -10px;
     background-image: url(../img/form-close.svg);
     background-repeat: no-repeat;
+} */
+.modal-close {
+    position: absolute;
+    content: "";
+    width: 21px;
+    height: 21px;
+    top: 15px;
+    right: -10px;
+    background-image: url(../img/form-close.svg);
+    background-repeat: no-repeat;
+    border: none;
+    background-color: white;
+    cursor: pointer;
 }
+
+.modal-close:hover {
+    background-image: url(../img/form-close-hover.svg);
+}
+
+.modal-close:active {
+    background-image: url(../img/form-close-active.svg);
+}
+
 .feedback form {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -643,31 +770,48 @@ div.feedback-wrapper {
 p.letter-text {
     grid-column: 1/3;
 }
+
 .feedback p {
     display: flex;
     flex-direction: column;
     margin: 0;
 }
+
 .feedback input {
-    border: 2px solid  #D7DCDE;
+    border: 2px solid #D7DCDE;
     border-radius: 3px;
     padding: 16px;
 }
+
+.feedback input:hover {
+    border: 2px solid #B4B9BB;
+}
+
 .feedback input {
     margin-bottom: 34px;
 }
+
 .feedback label {
     line-height: 18px;
     font-weight: 700;
     color: var(--basic-black);
     margin-bottom: 9px;
 }
+
 input[type=text]::placeholder,
 input[type=email]::placeholder {
-    color: var(--extra-gray);
+    color: rgba(68, 68, 68, 0.5);
     font-size: 16px;
     line-height: 18px;
-    opacity: 50%;
+}
+
+input[type=text]:focus::placeholder,
+input[type=email]:focus::placeholder {
+    color: rgba(68, 68, 68);
+}
+
+input:invalid {
+    color: #E74246;
 }
 
 .feedback textarea {
@@ -676,15 +820,23 @@ input[type=email]::placeholder {
     font-size: 16px;
     line-height: 18px;
     border: none;
-    border: 2px solid  #D7DCDE;
+    border: 2px solid #D7DCDE;
     border-radius: 3px;
     padding: 16px;
     margin-bottom: 47px;
     box-sizing: border-box;
     height: 118px;
-    
+}
+
+.feedback textarea:hover {
+    border: 2px solid #B4B9BB;
+}
+
+.feedback textarea:focus {
+    color: rgba(68, 68, 68);
 
 }
+
 .feedback .send {
     font-size: 16px;
     line-height: 18px;
@@ -697,8 +849,26 @@ input[type=email]::placeholder {
     border: none;
     display: inline-block;
     box-sizing: border-box;
-    border-radius: 3px; 
+    border-radius: 3px;
 }
+
+.feedback .send:hover {
+    background-color: var(--dark-red);
+    cursor: pointer;
+}
+
+.feedback .send:active {
+    background-color: var(--extra-red);
+    box-shadow: inset 0 3px 0 0 var(--shadow);
+    color: var(--white-opacity);
+}
+
+
+
+
+
+
+/* НАВИГАЦИЯ */
 .nav-wrapper {
     width: 1160px;
     /* border: 1px solid #000000; */
@@ -707,9 +877,11 @@ input[type=email]::placeholder {
     padding-left: 140px;
     padding-right: 140px;
 }
+
 .site-navigation {
     display: flex;
 }
+
 .site-nav-list {
     margin: 0;
     padding: 0;
@@ -719,14 +891,25 @@ input[type=email]::placeholder {
     flex-wrap: wrap;
     gap: 45px;
     row-gap: 15px;
-   
+
     padding-top: 26px;
 
 }
-.logo-header {
+
+.main-header .logo-header {
     width: 160px;
     margin-right: 202px;
 }
+
+p.logo-header:hover path {
+    fill: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+}
+
+p.logo-header:active path {
+    fill: rgba(0, 0, 0, 0.3);
+}
+
 .cart {
     width: 112px;
     margin-left: auto;
@@ -734,13 +917,38 @@ input[type=email]::placeholder {
     display: flex;
     justify-content: space-between;
 }
+
 .site-navigation p {
     margin: 0;
 }
+
 .cart-img {
     display: block;
     padding-top: 7px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -754,6 +962,7 @@ input[type=email]::placeholder {
     grid-template-columns: 1fr 2fr;
     column-gap: 40px;
 }
+
 .sort-card-grid {
     display: grid;
 }
@@ -770,6 +979,7 @@ input[type=email]::placeholder {
     /* outline: 5px solid rgba(29, 32, 226, 0.7); 
     outline-offset: -5px; */
 }
+
 .card-list li {
     width: 360px;
 
@@ -779,7 +989,7 @@ input[type=email]::placeholder {
 
 
 
- /* .filters-form {
+/* .filters-form {
     outline: 5px solid rgba(226, 134, 29, 0.7); 
     outline-offset: -5px;   
 } */
@@ -792,18 +1002,28 @@ input[type=email]::placeholder {
     /* outline: 5px solid rgba(213, 226, 29, 0.7); 
     outline-offset: -5px; */
     margin-bottom: 60px;
-} 
+}
+
 .header-inner {
     background-color: var(--basic-gray);
 }
+
 a .logo-header:hover {
     opacity: 0.7;
+    cursor: pointer;
 }
+
 a .logo-header:active {
     opacity: 0.3;
 }
+
+.header-inner .logo-header {
+    width: 160px;
+    margin-right: 202px;
+}
+
 .site-nav-item a.active {
-    text-decoration: underline; 
+    text-decoration: underline;
     text-decoration-color: var(--red);
     text-decoration-thickness: 2px;
     text-underline-offset: 13px;
@@ -815,17 +1035,19 @@ a .logo-header:active {
     margin-bottom: 55px;
 
 }
+
 .catalog-main h1 {
     max-width: 1160px;
     background-color: var(--basic-gray);
-     text-align: center;
-     margin: 0 auto;
-     padding-top: 72px;
-     padding-bottom: 108px;
-     font-size: 55px;
-     font-weight: 500;
-     line-height: 55px;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 72px;
+    padding-bottom: 108px;
+    font-size: 55px;
+    font-weight: 500;
+    line-height: 55px;
 }
+
 button.filter-button {
     background-color: var(--basic-gray);
     border: none;
@@ -837,18 +1059,22 @@ button.filter-button {
     padding: 17px 89px 15px 88px;
     border-radius: 3px;
 }
+
 button.filter-button:hover {
     background-color: var(--gray-btn-hover);
 }
+
 button.filter-button:active {
     background-color: var(--gray-btn-active);
     box-shadow: inset 0 3px 0 0 var(--shadow);
 
 }
+
 .sort {
     display: flex;
     margin-bottom: 48px;
 }
+
 .sort h2 {
     font-size: 18px;
     line-height: 30px;
@@ -857,6 +1083,7 @@ button.filter-button:active {
     margin-right: auto;
     text-transform: uppercase;
 }
+
 .sort-list {
     margin: 0;
     padding: 0;
@@ -867,44 +1094,108 @@ button.filter-button:active {
     flex-wrap: wrap;
     gap: 26px;
 }
-.sort-list li {
+
+.sort-list button {
+    padding: 0;
+    font-family: inherit;
     font-size: 14px;
     line-height: 18px;
     text-transform: uppercase;
     color: var(--basic-black-opacity);
+    border: none;
+    background-color: white;
+    cursor: pointer;
 }
+
+.sort-list button:hover {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.sort-list button:active {
+    color: rgba(0, 0, 0);
+}
+
 .sort-list .activ-sort-item {
     color: var(--basic-black);
 }
+
 div.sort-button {
     width: 40px;
     margin-left: 47px;
     display: flex;
     justify-content: space-between;
 }
+
 button.price-down,
 button.price-up {
     padding: 0;
     border: none;
     background-color: var(--basic-white);
     width: 11px;
+    cursor: pointer;
 }
+
+button.price-down path,
+button.price-up path {
+    opacity: 0.2;
+}
+
+button.active-price-button path {
+    fill: #231F20;
+    opacity: 1;
+}
+
+button.price-down:hover path,
+button.price-up:hover path {
+    opacity: 1;
+}
+
+button.price-down:active path,
+button.price-up:active path {
+    fill: #231F20;
+}
+
+
+
+
+
+
+
 section.cards {
     margin-bottom: 54px;
 }
+
 div.browser {
+    position: relative;
     width: 360px;
     height: 40px;
     background-color: var(--basic-gray);
     border-radius: 3px 3px 0 0;
 }
+div.points {
+    position: absolute;
+    top: 13px;
+    left: 16px;
+    display: flex;
+    width: 60px;
+    justify-content: space-between;
+}
+div.point {
+    width: 14px;
+    height: 14px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
 
 .card-list-item-current .browser {
     background-color: #4D4D4D;
 }
+
 .card-list-item p {
     margin: 0;
 }
+
 .card-list-item img {
     border: 1px solid #F2F2F2;
     border-radius: 0 0 7px 7px;
@@ -914,6 +1205,7 @@ img.sedona {
     box-shadow: 0 6px 15px 0 var(--shadow);
 
 }
+
 div.price {
     width: 360px;
     box-sizing: border-box;
@@ -924,30 +1216,38 @@ div.price {
     padding: 26px 53px 44px 52px;
     border-radius: 0 0 7px 7px;
 }
+
 li.card-sedona {
     position: relative;
-} 
+}
+
 div.sedona-price {
     position: absolute;
     bottom: 6px;
 }
+
 li.card-pinkapp {
     position: relative;
 }
+
 div.pinkapp-price {
     position: absolute;
     bottom: 7px;
 }
+
 li.card-kvast {
-    position: relative; 
+    position: relative;
 }
+
 div.kvast-price {
     position: absolute;
     bottom: 6px;
 }
+
 .price h3 {
     margin: 0;
 }
+
 .price a.link-title {
     font-size: 18px;
     line-height: 30px;
@@ -959,20 +1259,24 @@ div.kvast-price {
     margin-bottom: 12px;
     display: block;
 }
+
 .price a.link-title:hover {
     color: var(--red);
 }
+
 .price a.link-title:active {
     color: var(--basic-black-opacity);
 
 }
+
 .price p {
     line-height: 18px;
     text-align: center;
     margin: 0;
     margin-bottom: 32px;
-    
+
 }
+
 .price button {
     font-size: 16px;
     line-height: 18px;
@@ -983,17 +1287,20 @@ div.kvast-price {
     width: 200px;
     height: 50px;
     padding: 17px 72px 15px 72px;
-    display: inline-block;
+    
     border-radius: 3px;
 }
+
 .price button:hover {
     background-color: var(--dark-red);
 }
+
 .price button:active {
     background-color: var(--extra-red);
     box-shadow: inset 0 3px 0 0 var(--shadow);
 
 }
+
 .filters legend {
     font-size: 18px;
     line-height: 30px;
@@ -1003,6 +1310,7 @@ div.kvast-price {
     padding: 0;
     /* margin-bottom: 13px; */
 }
+
 .filters fieldset {
     margin: 0;
     padding: 0;
@@ -1013,42 +1321,45 @@ div.kvast-price {
 
 /* Фильтр с диапазоном */
 
-  /* Форма в стилевом оформлении не участвует, поэтому мы добавляем стили для fieldset. Обнуляем свойства, которые идут у тега по умолчанию. */
-  .filter-item {
+/* Форма в стилевом оформлении не участвует, поэтому мы добавляем стили для fieldset. Обнуляем свойства, которые идут у тега по умолчанию. */
+.filter-item {
     margin: 0;
     padding: 0;
     border: none;
-  
+
     /* Добавляем вспомогательные стили. Обратите внимание, что отступы задаются только для того, чтобы фильтр удобно было смотреть в текущей демонстрации. */
     /* Для демонстрации */
     width: 260px;
-    margin: 50px auto; 
-  }
-  /* Зададим ширину фильтра и внешний отступ сверху. */
-  .range-filter {
+    margin: 50px auto;
+}
+
+/* Зададим ширину фильтра и внешний отступ сверху. */
+.range-filter {
     width: 260px;
     margin-top: 49px;
     margin-bottom: 54px;
-  }
-  /* Задаём стили заголовка. */
-  .filter-item legend {
+}
+
+/* Задаём стили заголовка. */
+.filter-item legend {
     font-size: 18px;
     line-height: 30px;
     text-transform: uppercase;
     font-weight: 700;
-    
-  }
-  /* Перейдём к блоку с ползунками. Для начала добавим его оформление. Зададим высоту, цвет фона и скругление углов, как в макете. */
-  .range-controls {
+
+}
+
+/* Перейдём к блоку с ползунками. Для начала добавим его оформление. Зададим высоту, цвет фона и скругление углов, как в макете. */
+.range-controls {
     position: relative;
-  
+
     /* box-sizing: border-box;
     height: 80px; */
     /* Так как внутренние отступы учитываются в размер объекта, уменьшим высоту объекта на размер верхнего внутреннего отступа. */
-  
+
     height: 41px;
-  
-  
+
+
     /* Добавим отступ снизу, чтобы отодвинуть нижний блок. */
     margin-bottom: 15px;
     /* Теперь выровняем шкалу по центру нашего элемента. Для этого зададим верхний внутренний отступ, равный общей высоте блока, минус высота шкалы и всё это делённое на 2: ((80px — 2px) / 2 = 39px). */
@@ -1056,24 +1367,27 @@ div.kvast-price {
     /* Остаётся добавить внутренние отступы по бокам. */
     padding-right: 20px;
     padding-left: 20px;
-  
+
     background-color: #f1f1f1;
     border-radius: 5px;
-  }
-  /* Добавим стили шкалы: высоту и цвет фона. */
-  .range-controls .scale {
+}
+
+/* Добавим стили шкалы: высоту и цвет фона. */
+.range-controls .scale {
     height: 2px;
     background: #d7dcde;
-  }
-  /* Теперь добавим стили для изменяющейся шкалы внутри .scale. У него такая же высота, зелёный цвет фона и пока произвольная ширина. */
-  .range-controls .bar {
+}
+
+/* Теперь добавим стили для изменяющейся шкалы внутри .scale. У него такая же высота, зелёный цвет фона и пока произвольная ширина. */
+.range-controls .bar {
     width: 70%;
     height: 2px;
     background: #00ca74;
-  }
-  /* Перейдём к кружкам, которыми мы будем управлять нашим фильтром. Мы будем позиционировать их абсолютно, поэтому первым шагом необходимо добавить обёртке position: relative */
-  /* Для начала поработаем над их внешним видом. Добавим высоту, ширину и цвет заднего фона. Границам добавим обводку. */
-  .range-controls .toggle {
+}
+
+/* Перейдём к кружкам, которыми мы будем управлять нашим фильтром. Мы будем позиционировать их абсолютно, поэтому первым шагом необходимо добавить обёртке position: relative */
+/* Для начала поработаем над их внешним видом. Добавим высоту, ширину и цвет заднего фона. Границам добавим обводку. */
+.range-controls .toggle {
     width: 4px;
     height: 4px;
     padding: 0;
@@ -1081,32 +1395,35 @@ div.kvast-price {
     background-color: #ababab;
     /* Закруглим их. */
     border-radius: 50%;
-  /* Добавим тень. */
-  box-shadow: 0 2px 1px 0 #cfcfcf;
-  /* Теперь спозиционируем их. Для начала сверху. */
-  position: absolute;
-  top: 31px;
-  left: 0;
-  /* Последним штрихом добавим курсор с рукой для этих элементов. */
-  cursor: pointer;
-  
-  }
-  /* А теперь через уникальные классы добавим позицию слева, для каждого элемента. */
-  .range-controls .toggle-min {
+    /* Добавим тень. */
+    box-shadow: 0 2px 1px 0 #cfcfcf;
+    /* Теперь спозиционируем их. Для начала сверху. */
+    position: absolute;
+    top: 31px;
+    left: 0;
+    /* Последним штрихом добавим курсор с рукой для этих элементов. */
+    cursor: pointer;
+
+}
+
+/* А теперь через уникальные классы добавим позицию слева, для каждого элемента. */
+.range-controls .toggle-min {
     left: 18px;
-  }
-  
-  .range-controls .toggle-max {
+}
+
+.range-controls .toggle-max {
     left: 160px;
-  }
-  /* Перейдём к нижней части. Зададим для label стили текста. */
-  .price-controls label {
+}
+
+/* Перейдём к нижней части. Зададим для label стили текста. */
+.price-controls label {
     text-transform: uppercase;
     font-family: "Roboto", "Arial", sans-serif;
     font-size: 16px;
-  }
-  /* Отнаследуем для input стили от родителя. */
-  .price-controls input {
+}
+
+/* Отнаследуем для input стили от родителя. */
+.price-controls input {
     font-family: inherit;
     font-size: inherit;
     /* Зададим полям остальные стили по макету. */
@@ -1118,35 +1435,70 @@ div.kvast-price {
     border: none;
     border-radius: 5px;
     background: #f1f1f1;
-  
-  }
-  /* Сделаем внутри флекс и раздвинем наши блоки по краям. */
-  .price-controls {
+
+}
+
+/* Сделаем внутри флекс и раздвинем наши блоки по краям. */
+.price-controls {
     display: flex;
     justify-content: space-between;
-  }
-  
+}
+
 
 /* радиокнопки */
 legend.grid-title {
     margin-bottom: 16px;
 }
+
 .filter-option label {
-        position: relative;
-        display: block;
-        cursor: pointer;
-        user-select: none;    
+    position: relative;
+    display: block;
+    cursor: pointer;
+    user-select: none;
+
 }
+
+.filter-input-radio[disabled] + label {
+    color: rgba(40, 49, 54, 0.3);
+    cursor: default;
+}
+
+.filter-input-radio[disabled] + label::before {
+    content: "";
+    position: absolute;
+    left: -36px;
+    top: -1px;
+    width: 25px;
+    height: 25px;
+    border: 4px solid rgba(77, 77, 77, 0.1);
+    border-radius: 50%;
+    box-sizing: border-box;
+
+}
+
 .filter-input-radio + label::before {
-        content: "";
-        position: absolute;
-        left: -36px;
-        top: -1px;
-        width: 25px;
-        height: 25px;
-        border: 4px solid rgba(77, 77, 77, 0.4);
-        border-radius: 50%;
-        box-sizing: border-box;    
+    content: "";
+    position: absolute;
+    left: -36px;
+    top: -1px;
+    width: 25px;
+    height: 25px;
+    border: 4px solid rgba(77, 77, 77, 0.4);
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.filter-input-radio + label:hover::before {
+    border: 4px solid rgba(77, 77, 77);
+}
+
+.filter-input-radio:focus + label::before {
+    outline: black auto 5px;
+}
+.filter-input-radio[disabled] + label:hover::before {
+    border: 4px solid rgba(77, 77, 77, 0.1);
+    cursor: default;
+
 }
 .filter-input-radio:checked + label::after {
     content: "";
@@ -1158,16 +1510,33 @@ legend.grid-title {
     background-color: rgba(77, 77, 77, 0.4);
     border-radius: 50%;
 }
+
+.filter-input-radio:checked + label:hover::after {
+    content: "";
+    position: absolute;
+    left: -28px;
+    top: 7px;
+    width: 9px;
+    height: 9px;
+    background-color: rgba(77, 77, 77);
+    border-radius: 50%;
+}
+
 ul.grid-radio-list {
     margin: 0;
     padding: 0;
     list-style: none;
     margin-bottom: 43px;
 }
+
 .grid-radio-list li {
     margin-bottom: 15px;
     padding-left: 36px;
 }
+
+
+
+
 
 
 /* чекбоксы */
@@ -1175,17 +1544,20 @@ legend.feature-title {
     margin-bottom: 16px;
 
 }
+
 ul.features-checkbox-list {
     margin: 0;
     padding: 0;
     list-style: none;
     margin-bottom: 48px;
 }
+
 .features-checkbox-list li {
     margin-bottom: 17px;
     padding-left: 36px;
 }
-.filter-input-checkbox + label::before {
+
+/* .filter-input-checkbox+label::before {
     content: "";
     position: absolute;
     left: -36px;
@@ -1195,23 +1567,85 @@ ul.features-checkbox-list {
     box-sizing: border-box;
     border: 2px solid rgba(77, 77, 77, 0.4);
     border-radius: 3px;
-  }
+}*/
+
 .filter-input-checkbox:checked + label::after {
     content: "";
     position: absolute;
     top: 2px;
-    left: -32px;
+    left: -35px;
     width: 26px;
     height: 26px;
-    background-image: url(../img/checkbox-on.svg); 
-    background-repeat: no-repeat; 
+    background-image: url(../img/checkbox-on.svg);
+    background-repeat: no-repeat;
     background-position: 0 0;
-    opacity: 0.4;
 }
 
+.filter-input-checkbox:checked + label:hover::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: -35px;
+    width: 26px;
+    height: 26px;
+    background-image: url(../img/checkbox-on-hover.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
 
+.filter-input-checkbox + label::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: -35px;
+    display: block;
+    width: 26px;
+    height: 26px;
+    background-image: url(../img/checkbox-off.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
 
+}
 
+.filter-input-checkbox + label:hover::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: -35px;
+    display: block;
+    width: 26px;
+    height: 26px;
+    background-image: url(../img/checkbox-off-hover.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+}
+.filter-input-checkbox:focus + label::before {
+    /* outline: black auto 5px; */
+    width: 23px;
+    height: 23px;
+    border: 3px solid black;
+    border-radius: 3px;
+}
+.filter-input-checkbox[disabled] + label {
+    color: rgba(40, 49, 54, 0.3);
+    cursor: default;
+}
+.filter-input-checkbox[disabled] + label::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: -35px;
+    display: block;
+    width: 26px;
+    height: 26px;
+    background-image: url(../img/checkbox-off-block.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    cursor: default;
+
+}
+/* Пагинация */
 
 .pagination-list {
     margin: 0;
@@ -1220,6 +1654,7 @@ ul.features-checkbox-list {
     display: flex;
     gap: 11px;
 }
+
 .pagination-item a {
     background-color: var(--basic-gray);
     display: inline-block;
@@ -1236,11 +1671,28 @@ ul.features-checkbox-list {
     align-items: center;
     border-radius: 3px;
 }
+
+.pagination-item a:not(.pagination-item-current a):hover {
+    background-color: #DFDFDF;
+}
+
+.pagination-item a:not(.pagination-item-current a):active {
+    background-color: #D5D5D5;
+    color: rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 3px 0 0 var(--shadow);
+
+}
+
 .pagination-item-current a {
     background-color: var(--basic-white);
     border: 3px solid var(--gray-medium);
     box-sizing: border-box;
 }
+
+
+
+
+
 .next-page a {
     width: 260px;
 }
